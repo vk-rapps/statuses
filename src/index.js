@@ -14,9 +14,12 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './store';
 import * as API from './api';
+
+import { loadProfile } from './store/profile/actions';
 import { loadStatuses } from './store/statuses/actions';
 
 export const store = createStore(rootReducer);
+API.getProfile().then((profile) => store.dispatch(loadProfile(profile)));
 API.getStatuses().then((statuses) => store.dispatch(loadStatuses(statuses)));
 
 // Init VK Mini App
