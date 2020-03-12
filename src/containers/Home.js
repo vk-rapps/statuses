@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { Panel, PanelHeader, PanelHeaderButton, Group, Header, List, Cell, Avatar } from '@vkontakte/vkui';
+import { Panel, PanelHeader, PanelHeaderButton, Group, Header, List, Cell, Avatar, Div } from '@vkontakte/vkui';
 
 import FireEvent from '../utils/FireEvent';
 import StatusCard from "../components/StatusCard";
@@ -50,7 +50,7 @@ const Home = ({ id, navigator }) => {
             mine: true
           }
     ]);
-  
+
     return (
         <Panel id={id}>
             <PanelHeader
