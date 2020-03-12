@@ -1,0 +1,34 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "text": "Привет, мир!",
+            "installed": 123,
+            "owner": {
+                "id": 1,
+                "name": "Super Mem"
+            },
+            "mine": false
+        },
+        {
+            "id": 2,
+            "text": "Нормально делай — нормально будет",
+            "installed": 9,
+            "owner": {
+                "id": 1,
+                "name": "Super Mem"
+            },
+            "mine": false
+        },
+        {
+            "id": 3,
+            "text": "Я мою посуду",
+            "installed": 95,
+            "owner": {
+                "id": 1,
+                "name": "Super Mem"
+            },
+            "mine": true
+        }
+    ]
+}
