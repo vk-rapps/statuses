@@ -11,6 +11,7 @@ import Icon24AddOutline from '@vkontakte/icons/dist/24/add_outline';
 const Home = ({id, navigator}) => {
     const isStatusesLoaded = useSelector((store) => store.statuses.loaded);
     const statuses = useSelector((store) => store.statuses.list);
+    const profile = useSelector((store) => store.profile.profile);
 
     return (
         <Panel id={id}>
@@ -28,13 +29,16 @@ const Home = ({id, navigator}) => {
                     <Cell
                         multiline
                         expandable
-                        onClick={() => FireEvent("https://vk.com/this.state.user")}
-                        before={<Avatar
-                            src="https://sun1-93.userapi.com/impf/c855628/v855628786/1e3260/-TOChKtqItU.jpg?size=400x0&quality=90&sign=8f8a99a368e53f279961cb7e7e2a6b07"
-                            size={64}/>}
-                        description="Работаю за латте ☕ | По вопросам, связанным с ВКонтакте: vk.cc/help"
+                        onClick={() => FireEvent(`https://vk.com/id${profile && profile.id}`)}
+                        before={
+                            <Avatar
+                                src={profile && profile.photo_200}
+                                size={64}
+                            />
+                        }
+                        description={profile && profile.status}
                     >
-                        Степан Новожилов
+                        {profile && profile.first_name} {profile && profile.last_name}
                     </Cell>
                 </List>
             </Group>
