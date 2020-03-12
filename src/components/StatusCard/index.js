@@ -6,6 +6,7 @@ const StatusCard = ({ text, owner, onOpen }) => {
     return (
         <Card mode="shadow" size="l" style={{padding: 10, marginBottom: 15}} onClick={onOpen}>
             <Cell
+                expandable
                 multiline
                 description={text}
                 before={
