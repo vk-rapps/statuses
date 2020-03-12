@@ -5,7 +5,7 @@ import Home from './containers/Home';
 import Create from './containers/Create';
 
 const App = () => {
-	const [ activePanel, setActivePanel ] = useState("create");
+	const [ activePanel, setActivePanel ] = useState("home");
 	const [ popout, setPopout ] = useState(null);
 
 	const goForward = (nextPanel = null) => {

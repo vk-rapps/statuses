@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, PanelHeader, Group, Header, List, Cell, Avatar } from '@vkontakte/vkui';
+import { Panel, PanelHeader, PanelHeaderButton, Group, Header, List, Cell, Avatar } from '@vkontakte/vkui';
 
 import FireEvent from '../utils/FireEvent';
 
-const Home = ({ id }) => {
+import Icon24AddOutline from '@vkontakte/icons/dist/24/add_outline';
+
+const Home = ({ id, navigator }) => {
     return (
         <Panel id={id}>
-            <PanelHeader>
+            <PanelHeader
+                left={
+                    <PanelHeaderButton onClick={() => navigator.goForward("create")}>
+                        <Icon24AddOutline fill="var(--accent)" />
+                    </PanelHeaderButton>
+                }
+            >
                 Статусы
             </PanelHeader>
             <Group>
