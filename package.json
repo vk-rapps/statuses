@@ -1,0 +1,28 @@
+{
+  "name": "statuses",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env PORT=10888 react-scripts start",
+    "build": "react-scripts build"
+  },
+  "keywords": [],
+  "author": "hit2hat",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.2.1",
+    "react-hot-loader": "^4.12.19",
+    "react-scripts": "^3.4.0"
+  },
+  "dependencies": {
+    "@vkontakte/icons": "^1.17.1",
+    "@vkontakte/vk-bridge": "^2.1.2",
+    "@vkontakte/vkui": "^3.4.2",
+    "chalk": "^2.4.2",
+    "core-js": "^3.6.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}
