@@ -34,18 +34,18 @@ const Create = ({ id, navigator }) => {
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                 />
-                <FixedLayout vertical="bottom">
-                    <Div>
-                        <Button
-                            size="xl"
-                            before={<Icon24AddOutline />}
-                            onClick={publish}
-                        >
-                            Создать
-                        </Button>
-                    </Div>
-                </FixedLayout>
             </FormLayout>
+            <FixedLayout vertical="bottom">
+                <Div>
+                    <Button
+                        size="xl"
+                        before={<Icon24AddOutline />}
+                        onClick={publish}
+                    >
+                        Создать
+                    </Button>
+                </Div>
+            </FixedLayout>
         </Panel>
     );
 };
