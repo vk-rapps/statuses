@@ -11,4 +11,13 @@ import '@vkontakte/vkui/dist/vkui.css';
 // Init VK Mini App
 bridge.send('VKWebAppInit');
 
+// Theme changer
+bridge.subscribe(({ detail: { type, data }}) => {
+    if (type === "VKWebAppUpdateConfig") {
+        const schemeAttribute = document.createAttribute("scheme");
+        schemeAttribute.value = data.scheme ? data.scheme : "bright_light";
+        document.body.attributes.setNamedItem(schemeAttribute);
+    }
+});
+
 ReactDOM.render(<App />, document.getElementById('root'));
