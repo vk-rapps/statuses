@@ -3,9 +3,10 @@ import { View, ScreenSpinner } from '@vkontakte/vkui';
 
 import Home from './containers/Home';
 import Create from './containers/Create';
+import Status from './containers/Status';
 
 const App = () => {
-	const [ activePanel, setActivePanel ] = useState("home");
+	const [ activePanel, setActivePanel ] = useState("status");
 	const [ popout, setPopout ] = useState(null);
 
 	const goForward = (nextPanel = null) => {
@@ -26,6 +27,7 @@ const App = () => {
 		<View activePanel={activePanel} popout={popout}>
 			<Home id="home" navigator={navigator} />
 			<Create id="create" navigator={navigator} />
+			<Status id="status" navigator={navigator} />
 		</View>
 	);
 };
