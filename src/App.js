@@ -6,7 +6,7 @@ import Create from './containers/Create';
 import Status from './containers/Status';
 
 const App = () => {
-	const [ activePanel, setActivePanel ] = useState("status");
+	const [ activePanel, setActivePanel ] = useState("home");
 	const [ popout, setPopout ] = useState(null);
 
 	const goForward = (nextPanel = null) => {
