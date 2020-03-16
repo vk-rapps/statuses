@@ -13,7 +13,7 @@ const StatusCard = ({ text, owner, onOpen }) => {
                     <Avatar size={52} src="https://pp.userapi.com/c841034/v841034569/3b8c1/pt3sOw_qhfg.jpg" />
                 }
             >
-                {owner.name}
+                {owner.first_name} {owner.last_name}
             </Cell>
         </Card>
     )
